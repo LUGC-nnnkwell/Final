@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+
+
+:root {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+/* General Styles */
+h1{
+    font-family: "Lato";
+}
+html{
+    background-color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #766c6c;
+  }
+  header, nav, section, article, footer {
+    padding: 20px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+  }
+  nav #logo {
+    font-size: 1.5em;
+  }
+  nav #nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  nav #nav-links a:hover {
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
+  }
+  .button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #c00;
+  }
+  /* Home Section Styles */
+  #home {
+    background-color: #ddd;
+    text-align: center;
+  }
+  /* Products Grid Styles */
+  #products .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #products .product-item {
+    width: 30%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  #products .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Contact Form Styles */
+  #contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact form input, #contact form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  #contact form button {
+    align-self: center;
+  }
+
+
+
+
+
+
+
+  #home {
+    background: url('../Img/Basketball in a 9cde1840-5b14-46e5-944b-aa4ce07a352b.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  #home:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+    z-index: 0;
+  }
+  
+  #home h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    z-index: 1;
+  }
+  
+  #home .shop-now-btn {
+    background: #e03a3e; /* Button color */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: slideInFromLeft 1s ease-out 0s 1;
+  }
+  
+  #home .shop-now-btn:hover {
+    background: #c33135; /* Slightly darker red on hover */
+  }
+  
+  /* Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 2em;
+    }
+  
+    #home .shop-now-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+  }
+  
+
+
+
+
+
+
+
+  #about {
+    background-color: #111; /* Dark background */
+    color: white;
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
+  #about article {
+    max-width: 600px; /* Adjust width as necessary */
+    margin: auto; /* This centers the article in the section */
+  }
+  
+  #about h2 {
+    color: #ff9900; /* Orange color for the heading */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more-btn {
+    background-color: #ff9900; /* Orange color for the button */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #cc7a00; /* Darker orange on hover */
+  }
+  
+
+
+  
+
+
+
+  #contact {
+    background: #390000; /* A dark red background */
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .contact-info h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .contact-info .info {
+    margin: 20px 0;
+  }
+  
+  .contact-info .info .phone, 
+  .contact-info .info .email, 
+  .contact-info .info .location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info .info .icon {
+    display: inline-block;
+    margin-right: 10px;
+    background: white;
+    color: #a22b2f;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons .icon {
+    margin: 0 5px;
+    padding: 5px;
+    background: white;
+    color: #a22b2f;
+    border-radius: 50%;
+  }
+  
+  .social-icons a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .contact-form .input-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .contact-form .input-group input[type="text"],
+  .contact-form .input-group input[type="email"] {
+    flex: 1;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: #ddd; /* Light gray background */
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #a22b2f;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background: #911c22; /* Slightly darker red on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    #contact {
+      flex-direction: column;
+    }
+  
+    .contact-form {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+
+
+
+
+  
+  footer {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow the footer to wrap on smaller screens */
+    padding: 40px; /* Adjusted padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  .footer-section {
+    margin-right: 2%; /* Spacing between sections */
+    flex: 1; /* Allows flexible distribution of space */
+    min-width: 140px; /* Minimum width for smaller screens */
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 20px; /* Increased bottom margin */
+    color: #fff;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Reset default margin */
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 15px; /* Increase space between list items */
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #f00; /* Change color on hover */
+  }
+  
+  .social-media-links {
+    display: flex;
+    padding: 0; /* Reset padding */
+  }
+  
+  .social-media-links li {
+    margin-right: 15px; /* Space between social media icons */
+  }
+  
+  .copy-right {
+    text-align: right;
+    flex: 1; /* Makes sure this section takes up the remaining space */
+    margin-right: 0; /* Removes the margin on the right for the last element */
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+      margin-right: 0; 
+    }
+  
+    .copy-right {
+      order: -1; /* this will make the copyright go to the top */
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 75% 25%; 
+    
+    padding: 20px;
+  }
+
+    
+  /* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.product-info {
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red background */
+    color: white;
+    padding: 2em;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.product-info h1 {
+    margin-bottom: 0.5em;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.description {
+    margin-bottom: 1em;
+}
+
+.color-selection, .quantity-selection {
+    margin-bottom: 1em;
+}
+
+.color {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color.red { background-color: red; }
+.color.black { background-color: black; }
+.color.blue { background-color: blue; }
+
+input[type=number] {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.btn {
+    border: 2px solid white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    display: block; /* Make the buttons block level */
+}
+
+.btn:hover {
+    background: white;
+    color: red;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-info {
+        width: 50%;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-info {
+        width: 75%;
+    }
+}
+
+
+/* Base styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 20px;
+  }
+  
+  /* ... other styles ... */
+  
+  /* Smaller screens (Tablets) */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack grid items on top of each other */
+    }
+    
+    .product-info, /* Add any other classes here that need to adjust for tablet size */ {
+      padding: 1em; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  /* Mobile phones */
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack grid items on top of each other */
+    }
+  
+    .product-info, /* Add any other classes here that need to adjust for mobile size */ {
+      padding: 1em; /* Adjust padding for smaller screens */
+    }
+    
+    .btn {
+      width: auto; /* Allow buttons to take full width of their container */
+    }
+    
+    input[type=number] {
+      width: auto; /* Allow input to take full width of their container */
+    }
+    
+    /* Adjust font sizes for mobile if necessary */
+    .price {
+      font-size: 1.2em; /* Adjust font size */
+    }
+    
+    /* Adjustments for color selectors if needed */
+    .color-selection .color {
+      height: 20px; /* Smaller size for mobile */
+      width: 20px;
+    }
+  }
+  
+
+
+
+
+
+/* Animation*/
+/* making the class="shop-now-btn animate frome the left to the senter of the page*/
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  
+  /* making the class="shop-now-btn animate frome the right to the senter of the page*/
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-right {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+  
+  /* making the class="shop-now-btn animate frome the top to the senter of the page*/
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-top {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+  }
+  
+  /* making the class="shop-now-btn animate frome the bottom to the senter of the page*/
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-bottom {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+  }
+  
+
+
+
+
+
+  /* styles.css */
+.anime-image {
+    /* Apply a grayscale filter */
+    filter: grayscale(100%);
+    /* Other styles as needed for the image */
+    width: 100%;
+    height: auto;
+}
+
+/* If you want to add a hover effect where the image goes from grayscale to color */
+.anime-image:hover {
+    filter: none; /* Remove the filter on hover */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the filter effect */
+    transform: scale(1.03);
+
+}
+
+.nk-big-man1:hover {
+    transform: scale(5.0s);
+}
