@@ -505,7 +505,7 @@ input[type=number] {
       grid-template-columns: 1fr; /* Stack grid items on top of each other */
     }
     
-    .product-info, /* Add any other classes here that need to adjust for tablet size */ {
+    .product-info /* Add any other classes here that need to adjust for tablet size */ {
       padding: 1em; /* Adjust padding for smaller screens */
     }
   }
@@ -516,7 +516,7 @@ input[type=number] {
       grid-template-columns: 1fr; /* Stack grid items on top of each other */
     }
   
-    .product-info, /* Add any other classes here that need to adjust for mobile size */ {
+    .product-info /* Add any other classes here that need to adjust for mobile size */ {
       padding: 1em; /* Adjust padding for smaller screens */
     }
     
@@ -625,5 +625,5 @@ input[type=number] {
 }
 
 .nk-big-man1:hover {
-    transform: scale(5.0s);
+    transform: scale(5.0);
 }
